@@ -2,7 +2,7 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>C:\Users\Alex\Dropbox\LeaguePingChecker.jar</jar>
+  <jar>C:\Users\Alex\Dropbox\Other eclipse projects\LeaguePingChecker\LeaguePingChecker.jar</jar>
   <outfile>C:\Users\Alex\Dropbox\Other eclipse projects\LeaguePingChecker\LeaguePingChecker.exe</outfile>
   <errTitle></errTitle>
   <cmdLine></cmdLine>
