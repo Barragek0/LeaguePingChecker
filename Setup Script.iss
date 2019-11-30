@@ -8,7 +8,7 @@ Compression=lzma2
 SolidCompression=yes
 OutputDir=userdocs:LeaguePingChecker
 OutputBaseFilename=LeaguePingChecker
-;PrivilegesRequired=admin
+PrivilegesRequired=admin
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
@@ -20,4 +20,4 @@ Source: "C:\Users\Alex\Dropbox\Other eclipse projects\LeaguePingChecker\smile.ic
 
 [Icons]
 Name: "{group}\LeaguePingChecker"; Filename: "{app}\LeaguePingChecker.exe"
-Name: "{userdesktop}\LeaguePingChecker"; Filename: "{app}\LeaguePingChecker"; IconFilename: "{app}\smile.ico"; Tasks: desktopicon
+Name: "{commondesktop}\LeaguePingChecker"; Filename: "{app}\LeaguePingChecker"; IconFilename: "{app}\smile.ico"; Tasks: desktopicon
