@@ -1,6 +1,6 @@
 [Setup]
 AppName=LeaguePingChecker
-AppVersion=1.1
+AppVersion=1.2
 DefaultDirName={pf}\LeaguePingChecker
 DefaultGroupName=LeaguePingChecker
 UninstallDisplayIcon={app}\LeaguePingChecker.exe
@@ -11,7 +11,7 @@ OutputBaseFilename=LeaguePingChecker
 PrivilegesRequired=admin
 
 [Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}";
 
 [Files]
 Source: "C:\Users\Alex\Dropbox\Other eclipse projects\LeaguePingChecker\LeaguePingChecker.exe"; DestDir: "{app}"

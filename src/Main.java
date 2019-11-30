@@ -76,8 +76,9 @@ public class Main {
 	private static void loadSettings() {
 		try {
 			File theDir = new File(System.getProperty("user.home") + "/LeaguePingChecker");
+			File theDir1 = new File(System.getProperty("user.home") + "/LeaguePingChecker/settings.txt");
 			lastNotified = System.currentTimeMillis() - 300000;
-			if (!theDir.exists()) {
+			if (!theDir.exists() || !theDir1.exists()) {
 				System.out.println("directory doesnt exist.");
 				boolean result = false;
 
@@ -103,7 +104,7 @@ public class Main {
 						writer.println("notifications=true");
 						System.out.println("notifications=" + true);
 						validInput(dialog, writer,
-								"Set the ping tolerance before a notification is triggered\r\rFor example: If your average ping were 30 and the tolerance were 50, you'd receive a notification if your ping went above 80",
+								"Set the ping tolerance before a notification is triggered\n\nFor example: If your average ping were 30 and the tolerance were 50,\nyou'd receive a notification if your ping went above 80.\n\nIf you're not sure, set the value to 50.",
 								"tolerance");
 					} else {
 						writer.println("notifications=false");
@@ -402,15 +403,24 @@ public class Main {
 
 	public static String validInput(JDialog dialog, PrintWriter writer, String message, String name) {
 		String input = "";
-		while (input.equals("")) {
-			input = JOptionPane.showInputDialog(dialog, message);
+		boolean check = false;
+		// loops to make sure the input is a number and is not empty
+		while (!check) {
+			check = true;
 			try {
-				writer.println(name + "=" + input);
-				System.out.println(name + "=" + input);
-			} catch (Throwable e) {
-				JOptionPane.showMessageDialog(dialog, "An error has occured:\r\r" + e.toString());
+				int test = Integer.parseInt(JOptionPane.showInputDialog(dialog, message));
+				// if the user has submitted valid input, set actual input to the value and continue
+				input = test+"";
+			} catch (NumberFormatException nfe) {
+				nfe.printStackTrace();
+				check = false;
+			}
+			if (input.equals("")) {
+				check = false;
 			}
 		}
+		writer.println(name + "=" + input);
+		System.out.println(name + "=" + input);
 		return input;
 	}
 }
