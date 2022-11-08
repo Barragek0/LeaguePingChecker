@@ -2,10 +2,12 @@
 You can define your own IPs by editing the settings file at %userprofile%/LeaguePingChecker/settings.txt
 
 These are the IPs i'm using for EUW currently:
-  - euw2=104.160.141.2
+  - euw2=141.0.173.173
   - euw1=91.198.174.192
 
 If you're on a server other than EUW, you'll need to find IPs of websites that are hosted in your region, for example, your countries' government website. This might be a hard task though, best of luck.
+
+Edit: You could try searching for one in your country here https://www.similarweb.com/
 
 # LeaguePingChecker
 An open-source application coded in Java for League of Legends that automatically checks your ping and displays it on the taskbar.
